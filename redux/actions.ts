@@ -59,11 +59,7 @@ export const getCurrentPost = (id: number) => (dispatch: any) => {
                 },
             })
             .then((response) => {
-                if (response.status === 200) {
-                    dispatch(getPost(response.data));
-                } else {
-                    console.log('Response status: ', response.status);
-                }
+                dispatch(getPost(response.data));
             })
             .catch((error) => console.log( error));
     }
