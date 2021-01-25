@@ -6,9 +6,10 @@ import {State, Post} from '../../interfaces';
 import * as actions from '../../redux/actions';
 import CurrentPost from "../../components/currentpost";
 import GeneralWrapper from "../../components/generalwrapper";
+import {Subtitle} from "../../styles/style";
 
 interface PageCurrentPost {
-    post: Post | {};
+    post: Post;
     getCurrentPost: (id: number) => void;
     addCommentsData: (postId: number, body: string) => void;
 }
@@ -20,13 +21,13 @@ const PageCurrentPost: FC<PageCurrentPost> = ({ post, getCurrentPost, addComment
 
     return (
         <GeneralWrapper title={`Post ${postId}`}>
-            {post ? (
+            {post.id ? (
                 <CurrentPost
                     post={post}
                     addCommentsData={addCommentsData}
                 />
             ) : (
-                <p>Loading...</p>
+                <Subtitle>Wait a few seconds or this post does not exist</Subtitle>
             )}
         </GeneralWrapper>
     );

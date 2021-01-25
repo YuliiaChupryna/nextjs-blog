@@ -16,7 +16,7 @@ const PageRecentPosts: FC<PageRecentPostsProps> = ({posts, getAllPosts}) => {
 
     return (
         <GeneralWrapper title="Recent posts">
-            {posts ? (
+            {posts && posts.length > 0 ? (
                 <PostsList data={posts.length >= 5 ? posts.slice(posts.length - 5, posts.length) : posts}  />
             ) : (
                 <Subtitle>Wait a few seconds</Subtitle>
