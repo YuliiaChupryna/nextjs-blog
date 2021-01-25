@@ -1,1 +1,7 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+1. Clone this repo to your computer
+   <br />
+2. Run **npm i**
+   <br />
+3. Run **npm run dev**
+   <br />
+4. Open [http://localhost:3000/](http://localhost:3000/)
